@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Username</td>
+
+            <td>PhoneNumber</td>
+
+            <td>Role</td>
+            <td>Action</td>
+        </tr>
+
+        <% for(var i=0; i < dataTable.length; i++) { %>
+            <tr>
+                <td>
+                    <%= dataTable[i].username %>
+                </td>
+
+
+                <td>
+                    <%= dataTable[i].phonenumber %>
+                </td>
+                <td>
+                    <%= dataTable[i].role %>
+                </td>
+                <td>
+                    <a href="/edit-crud?id=<%=dataTable[i].id%>" style="background-color: orange; " type="button">Edit</a>
+                    <a href="/delete-crud?id=<%=dataTable[i].id%>" style="background-color: red;" type="button">Del</a>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+</body>
+
+</html>

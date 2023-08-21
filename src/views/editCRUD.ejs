@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit </title>
+</head>
+
+<body>
+    <form action="/put-crud" method="post">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" required placeholder="Tên đăng nhập" value="<%= user.username%>">
+
+        </div>
+
+        <div>
+            <label for="phonenumber">Phonenumber</label>
+            <input type="text" name="phonenumber" required placeholder="Số điện thoại" value="<%= user.phonenumber%>">
+        </div>
+        <div>
+            <input type="text" name="id" value="<%= user.id%> " hidden>
+        </div>
+        <select name="role">
+            <option value="<%=user.role%>">Staff</option>
+            <option value="<%= user.role%>">Admin</option>
+            </select>
+        <div>
+            <input type="submit">
+
+        </div>
+    </form>
+</body>
+
+</html>

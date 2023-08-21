@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <form action="/post-signup" method="post">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" required placeholder="Tên đăng nhập">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" required placeholder="Mật khẩu">
+        </div>
+        <div>
+            <label for="phonenumber">Phonenumber</label>
+            <input type="text" name="phonenumber" required placeholder="Số điện thoại">
+        </div>
+        <select name="role">
+            <option value="1">Staff</option>
+            <option value="2">Admin</option>
+        </select>
+        <div>
+            <input type="submit">
+
+        </div>
+    </form>
+</body>
+
+</html>
